@@ -32,7 +32,7 @@ function setInfo(name, address, rating, priceFactor, photoRef) {
 var restList;
 var index = 0;
 
-fetch('http://localhost:1111/api/test')
+fetch('https://enghack-bonappetit.herokuapp.com/api/test')
 .then(data => {return data.json()})
 .then(res => {
     restList = res;
@@ -61,7 +61,7 @@ function previousRest() {
 function sendText() {
     numbers = document.getElementById('phoneNumbers').value.split('\n');
     console.log(numbers);
-    fetch('http://localhost:1111/api/text', {
+    fetch('https://enghack-bonappetit.herokuapp.com/api/text', {
         method: "POST",
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify({
